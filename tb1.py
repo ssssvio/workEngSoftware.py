@@ -1,7 +1,7 @@
-print("Bem-vindo ao E-commerce SyncEletrônicos! \n");
+print("Bem-vindo a loja do Sávio Rezende de Freitas! \n");
 
 valorDoPedido = float(input("Informe o valor do pedido: "));
-quantidadeParcelas = int(input("Informe também o número de parcelas: "));
+quantidadeParcelas = int(input("Informe a quantidade de parcelas: "));
 
 if quantidadeParcelas < 4:
   juros = 0
