@@ -1,13 +1,13 @@
-print("Bem vindos a Fábrica de Camisetas do Sávio Rezende de Freitas");
+print("Bem vindos a Fábrica de Camisetas do Sávio Rezende de Freitas")
 
 def escolha_modelo():
     while True:
-        print("\nEntre com o modelo desejado");
-        print("MCS - Manga Curta Simples");
-        print("MLS - Manga Longa Simples");
-        print("MCE - Manga Curta Com Estampa");
-        print("MLE - Manga Longa Com Estampa");
-        modelo = input(">>").strip().upper();
+        print("\n Entre com o modelo desejado")
+        print("MCS - Manga Curta Simples")
+        print("MLS - Manga Longa Simples")
+        print("MCE - Manga Curta Com Estampa")
+        print("MLE - Manga Longa Com Estampa")
+        modelo = input("->").strip().upper()
         
         if modelo == 'MCS':
             return 1.80
@@ -18,14 +18,14 @@ def escolha_modelo():
         elif modelo == 'MLE':
             return 3.20
         else:
-            print("Escolha inválida, entre com o modelo novamente");
+            print("Escolha inválida, entre com o modelo novamente")
 
 def num_camisetas():
     while True:
         try:
-            num = int(input("Entre com o número de camisetas: "));
+            num = int(input("Entre com o número de camisetas: "))
             if num > 20000:
-                print("Não aceitamos tantas camisetas de uma vez. Por favor, entre com o número de camisetas novamente.");
+                print("Não aceitamos tantas camisetas de uma vez. Por favor, entre com o número de camisetas novamente.")
                 continue
             
             if num < 20:
@@ -37,18 +37,19 @@ def num_camisetas():
             elif 2000 <= num <= 20000:
                 desconto = 0.12
 
-            num_com_desconto = num * (1 - desconto);
+            num_com_desconto = num * (1 - desconto)
             return num_com_desconto
+        
         except ValueError:
-            print("Valor inválido, por favor, entre com um número válido de camisetas.");
+            print("Valor inválido, por favor, entre com um número válido de camisetas.")
 
 def frete():
     while True:
-        print("\nEscolha o tipo de frete:");
-        print("1 - Frete por transportadora - R$ 100.00");
-        print("2 - Frete por Sedex - R$ 200.00");
-        print("0 - Retirar pedido na fábrica - R$ 0.00");
-        opcao_frete = input(">>").strip();
+        print("\n Escolha o tipo de frete:")
+        print("1 - Frete por transportadora - R$ 100.00")
+        print("2 - Frete por Sedex - R$ 200.00")
+        print("0 - Retirar pedido na fábrica - R$ 0.00")
+        opcao_frete = input("->").strip()
         
         if opcao_frete == '1':
             return 100
@@ -60,10 +61,12 @@ def frete():
             print("Opção inválida, entre com o tipo de frete novamente.");
 
 if __name__ == "__main__":
-    valor_modelo = escolha_modelo();
-    quantidade = num_camisetas();
-    valor_frete = frete();
+    valor_modelo = escolha_modelo()
+    quantidade = num_camisetas()
+    valor_frete = frete()
 
-    total = (valor_modelo * quantidade) + valor_frete;
+    total = (valor_modelo * quantidade) + valor_frete
 
-    print(f"\n Total: R$ {total:.2f} (Modelo: {valor_modelo:.2f} * Quantidade(com desconto): {quantidade:.0f} + frete: {valor_frete:.2f})");
+    print("\n--------------------- Resumo do Pedido --------------------- \n")
+    print(f"Total: R$ {total:.2f} (Modelo: {valor_modelo:.2f} * Quantidade(com desconto): {quantidade:.0f} + frete: {valor_frete:.2f})")
+    print("\nObrigado por comprar conosco! Volte sempre!")

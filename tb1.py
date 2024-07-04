@@ -1,7 +1,7 @@
-print("Bem-vindo a loja do Sávio Rezende de Freitas! \n");
+print("Bem-vindo a loja do Sávio Rezende de Freitas! \n")
 
-valorDoPedido = float(input("Informe o valor do pedido: "));
-quantidadeParcelas = int(input("Informe a quantidade de parcelas: "));
+valorDoPedido = float(input("Informe o valor do pedido: "))
+quantidadeParcelas = int(input("Informe a quantidade de parcelas: "))
 
 if quantidadeParcelas < 4:
   juros = 0
@@ -14,10 +14,10 @@ elif 9 <= quantidadeParcelas < 13:
 else:
   juros = 0.32
 
-valorDaParcela = valorDoPedido * (1 + juros) / quantidadeParcelas;
-valorTotalParcelado = valorDaParcela * quantidadeParcelas;
+valorDaParcela = valorDoPedido * (1 + juros) / quantidadeParcelas
+valorTotalParcelado = valorDaParcela * quantidadeParcelas
 
-print("\n ----------------- Resumo do Pedido --------------------- \n");
-print(f"O valor de cada parcela é de: R$ {valorDaParcela:.2f}");
-print(f"O valor total parcelado é de: R$ {valorTotalParcelado:.2f} \n");
-print("Obrigado por comprar conosco! Volte sempre!");
+print("\n--------------------- Resumo do Pedido --------------------- \n")
+print(f"O valor de cada parcela é de: R$ {valorDaParcela:.2f}")
+print(f"O valor total parcelado é de: R$ {valorTotalParcelado:.2f} \n")
+print("Obrigado por comprar conosco! Volte sempre!")

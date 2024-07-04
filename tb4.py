@@ -23,13 +23,13 @@ def cadastrar_funcionario(id):
 
 def consultar_funcionarios():
     while True:
-        print("\n---------- MENU CONSULTAR FUNCIONÁRIO ------------------");
-        print("Escolha a opção desejada:");
-        print("1 - Consultar Todos os Funcionários");
+        print("\n---------- MENU CONSULTAR FUNCIONÁRIO ------------------ ");
+        print("Escolha a opção desejada: ");
+        print("1 - Consultar Todos os Funcionários cadastrados");
         print("2 - Consultar Funcionário por id");
-        print("3 - Consultar Funcionário(s) por setor");
+        print("3 - Consultar Funcionário(s) por setor de trabalho");
         print("4 - Retornar ao menu principal");
-        opcao = input(">>").strip();
+        opcao = input("->").strip();
         
         if opcao == '1':
             print("\n----------------");
@@ -50,7 +50,7 @@ def consultar_funcionarios():
                     print(f"nome: {funcionario['nome']}");
                     print(f"setor: {funcionario['setor']}");
                     print(f"salario: {funcionario['salario']}");
-                    print("----------------");
+                    print("---------------- \n");
                     encontrado = True;
                     break;
             if not encontrado:
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         print("2 - Consultar Funcionário(s)")
         print("3 - Remover Funcionário")
         print("4 - Encerrar Programa")
-        opcao = input(">>").strip()
+        opcao = input("->").strip()
         
         if opcao == '1':
             id_global += 1
