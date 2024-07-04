@@ -35,7 +35,6 @@ while True:
     else:
       total += 21;
   
-
   adcional = input("Deseja mais alguma coisa? (S/N): ")
   
   while adcional.upper() != "N" and adcional.upper() != "S":
